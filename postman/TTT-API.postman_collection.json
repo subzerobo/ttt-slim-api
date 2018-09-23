@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "d0fd1282-4d35-4cdf-8b87-6c26a1e19e07",
+		"name": "TTT-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Init",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "abb39ee2-08a5-4900-90cc-7247f1941538",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.globals.set(\"last_state\",JSON.stringify(jsonData.layout));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:2000/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b66ca779-6abc-4e47-835b-2bb9f05a8244",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.globals.set(\"last_state\",JSON.stringify(jsonData.layout));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"layout\" : {{last_state}},\n\t\"botName\" : \"dumb\",\n\t\"position\" : [0,1]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/move",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"move"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move_manual",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b66ca779-6abc-4e47-835b-2bb9f05a8244",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.globals.set(\"last_state\",JSON.stringify(jsonData.layout));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"layout\" : [[{\"type\":0},{\"type\":0},{\"type\":0}],[{\"type\":0},{\"type\":0},{\"type\":0}],[{\"type\":0},{\"type\":0},{\"type\":0}]],\n\t\"position\" : [1,1],\n\t\"player\" :1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/move_manual",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"move_manual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Robot Move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b66ca779-6abc-4e47-835b-2bb9f05a8244",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.globals.set(\"last_state\",JSON.stringify(jsonData.layout));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"layout\" : [[{\"type\":0},{\"type\":0},{\"type\":0}],[{\"type\":0},{\"type\":1},{\"type\":0}],[{\"type\":0},{\"type\":0},{\"type\":0}]],\n\t\"botName\" : \"dumb\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

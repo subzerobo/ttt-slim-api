@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Tic-Tac-Toe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a id="init" class="nav-link" href="#">New Game <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bot Level !</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a data-bot-value="Dumb" class="btnBot dropdown-item" href="#">Dumb</a>
+                    <a data-bot-value="Genius" class="btnBot dropdown-item" href="#">Genius</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Game Mode</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a data-bot-value="Auto" class="btnBotMode dropdown-item" href="#">Auto</a>
+                    <a data-bot-value="Manual" class="btnBotMode dropdown-item" href="#">Manual</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h3>Current Bot Level: <span class="bot_level">Dumb</span></h3>
+        <h3>Current Mode: <span class="bot_mode">Auto</span></h3>
+        <p class="lead">Change the Bot difficulty level anytime during the game from `Bot Level` menu ... </p>
+    </div>
+
+    <div class="starter-template">
+        <div class="tile-container">
+            <div class="tile" id="tile-1" data-position="0,0"></div>
+            <div class="tile" id="tile-2" data-position="0,1"></div>
+            <div class="tile" id="tile-3" data-position="0,2"></div>
+            <div class="tile" id="tile-4" data-position="1,0"></div>
+            <div class="tile" id="tile-5" data-position="1,1"></div>
+            <div class="tile" id="tile-6" data-position="1,2"></div>
+            <div class="tile" id="tile-7" data-position="2,0"></div>
+            <div class="tile" id="tile-8" data-position="2,1"></div>
+            <div class="tile" id="tile-9" data-position="2,2"></div>
+        </div>
+
+        <div id="game-result"></div>
+    </div>
+
+</main><!-- /.container -->
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

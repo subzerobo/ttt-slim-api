@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    padding-top: 5rem;
+    font-family: 'Lato';
+}
+.starter-template {
+    padding: 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.bot_level {
+    color: firebrick;
+}
+
+.bot_mode {
+    color: firebrick;
+}
+.tile-container {
+    width: 330px;
+    overflow: inherit;
+    display: inline-block
+}
+
+.tile {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    background-color: #80dec5;
+}
+
+.x-mark {
+    background: #FFF url("../image/icon-x.png") no-repeat center;
+}
+
+.o-mark {
+    background: #FFF url("../image/icon-o.png") no-repeat center;
+}
+
+div#game-result {
+    clear: both;
+    margin-top: 20px;
+    padding: 10px;
+    display:none;
+    background: none;
+}
+div#game-result.win {
+    background: #7fdec5;
+}
+
+div#game-result.lost {
+    background: #ea7c7c;
+}
+
+div#game-result.draw {
+    background: #ffc433;
+}
+.reset {
+    cursor:pointer;
+    text-decoration: underline;
+}
